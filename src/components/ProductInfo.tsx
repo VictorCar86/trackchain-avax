@@ -1,15 +1,28 @@
+/* Hooks */
+import { useState } from "react";
+
 import IconArrow from "../assets/icons/IconArrow";
 import IconBox from "../assets/icons/IconBox";
 import IconCheck from "../assets/icons/IconCheck";
 import IconTruck from "../assets/icons/IconTruck";
 
 function ProductInfo() {
-    const currentOrderState = 1;
+    const [statusNumber, setStatusNumber] = useState(0);
+
+    function handleClick(){
+        setStatusNumber(statusNumber + 1);
+
+        if(statusNumber === 3){
+            alert('Thank you for your purchase!, your product arrived at home');
+        }
+    }
+
+    const classActive = 'grid place-content-center h-28 w-28 border-2 border-black rounded-full';
 
     return (
         <>
             <div className="p-5 font-bold">
-                <header className="flex justify-between px-14 mt-3.5 mb-8">
+                <header className="flex w-full gap-10 justify-between px-8 mt-3.5 mb-8">
                     <h1 className="text-[40px]">
                         Check your product
                     </h1>
@@ -30,65 +43,73 @@ function ProductInfo() {
                         <p className="mb-1">
                             Product Name:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            Lorem ipsum dolor sit amet
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            Mesa PC
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Product Price:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            Lorem ipsum dolor sit amet
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            $100
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Create Date:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            XX / XX / XXXX
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            19 / 05 / 2024
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Delivery Date:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            XX / XX / XXXX
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            21 / 05 / 2024
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Product Code:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            TC-XXXX
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            123ed
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Phone Number:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            +57 XXX XXX XXXX
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            +57 +57 321 123 456
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Delivery Status:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            Current state
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            1
                         </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Wallet User:
                         </p>
-                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
-                            Number wallet
+                        <p className="h-[42px] w-[288px] overflow-x-hidden pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">
+                            0x4358c4455175b370E04b35D2c132993980294C62
                         </p>
+                    </label>
+                    <label>
+                        <button 
+                        type="button"
+                        onClick={() => {
+                            handleClick();
+                        }}
+                        className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">Change product state</button>
                     </label>
                 </form>
 
@@ -100,25 +121,25 @@ function ProductInfo() {
 
                 <ul className="flex gap-9 w-min mx-auto">
                     <li className="relative">
-                        <div className={`grid place-content-center h-28 w-28 border-2 border-black rounded-full`}>
+                        <div className={`${statusNumber === 0 ? classActive : 'opacity-25 border-black'} grid place-content-center h-28 w-28 border-2 rounded-full`}>
                             <span>
                                 Preparing
                             </span>
                             <IconBox className="w-7 h-7 mx-auto" />
                         </div>
-                        <IconArrow className={`absolute top-0 scale-[0.45] translate-x-[74px] ${currentOrderState < 1 ? 'opacity-25' : undefined}`} />
+                        <IconArrow className={`absolute top-0 scale-[0.45] translate-x-[74px] ${statusNumber === 0 ? 'opacity-25' : undefined}`} />
                     </li>
                     <li className="relative">
-                        <div className={`grid place-content-center h-28 w-28 border-2 border-black rounded-full ${currentOrderState < 1 ? 'opacity-25' : undefined}`}>
+                        <div className={`${statusNumber === 1 ? classActive : 'opacity-25 border-black'} grid place-content-center h-28 w-28 border-2 rounded-full`}>
                             <span>
                                 Transporting
                             </span>
                             <IconTruck className="w-7 h-7 mx-auto" />
                         </div>
-                        <IconArrow className={`absolute top-0 scale-[0.45] translate-x-[74px] ${currentOrderState < 2 ? 'opacity-25' : undefined}`} />
+                        <IconArrow className={`absolute top-0 scale-[0.45] translate-x-[74px] ${statusNumber === 1 ? 'opacity-25' : undefined}`} />
                     </li>
                     <li>
-                        <div className={`grid place-content-center h-28 w-28 border-2 border-black rounded-full ${currentOrderState < 2 ? 'opacity-25' : undefined}`}>
+                        <div className={`${statusNumber === 2 ? classActive : 'opacity-25 border-black'} grid place-content-center h-28 w-28 border-2 rounded-full`}>
                             <span>
                                 Delivered
                             </span>
