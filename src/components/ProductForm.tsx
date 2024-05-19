@@ -8,7 +8,7 @@ function ProductForm() {
 
     return (
         <>
-            <div className="p-5 font-bold">
+            <div className="w-full flex flex-col items-center p-5 font-bold">
                 <header className="flex w-full gap-10 justify-between px-8 mt-3.5 mb-8">
                     <h1 className="text-[40px]">
                         Send your product

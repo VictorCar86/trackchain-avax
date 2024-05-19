@@ -21,7 +21,7 @@ function ProductInfo() {
 
     return (
         <>
-            <div className="p-5 font-bold">
+            <div className="w-full flex flex-col items-center p-5 font-bold">
                 <header className="flex w-full gap-10 justify-between px-8 mt-3.5 mb-8">
                     <h1 className="text-[40px]">
                         Check your product
@@ -109,7 +109,7 @@ function ProductInfo() {
                         onClick={() => {
                             handleClick();
                         }}
-                        className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">Change product state</button>
+                        className="relative left-[150px] top-2 h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 font-sans">Change product state</button>
                     </label>
                 </form>
 
