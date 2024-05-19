@@ -4,7 +4,6 @@ import IconCheck from "../assets/icons/IconCheck";
 import IconTruck from "../assets/icons/IconTruck";
 
 function ProductInfo() {
-    const inputStyles = "w-72 py-2 px-3 border border-gray-500 rounded-[12px] font-medium";
     const currentOrderState = 1;
 
     return (
@@ -31,7 +30,7 @@ function ProductInfo() {
                         <p className="mb-1">
                             Product Name:
                         </p>
-                        <p className="h-[42px] pt-[11px] pl-2.5 text-gray-500 border-b-2 border-gray-500">
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
                             Lorem ipsum dolor sit amet
                         </p>
                     </label>
@@ -39,7 +38,7 @@ function ProductInfo() {
                         <p className="mb-1">
                             Product Price:
                         </p>
-                        <p className="h-[42px] pt-[11px] pl-2.5 text-gray-500 border-b-2 border-gray-500">
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
                             Lorem ipsum dolor sit amet
                         </p>
                     </label>
@@ -47,37 +46,49 @@ function ProductInfo() {
                         <p className="mb-1">
                             Create Date:
                         </p>
-                        <input type="date" name="date" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            XX / XX / XXXX
+                        </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Delivery Date:
                         </p>
-                        <input type="date" name="delivery" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            XX / XX / XXXX
+                        </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Product Code:
                         </p>
-                        <input type="text" name="code" placeholder="TC-XXXX" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            TC-XXXX
+                        </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Phone Number:
                         </p>
-                        <input type="tel" name="phone" placeholder="+57 XXX XXX XXXX" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            +57 XXX XXX XXXX
+                        </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Delivery Status:
                         </p>
-                        <input type="text" name="status" placeholder="Current state" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            Current state
+                        </p>
                     </label>
                     <label>
                         <p className="mb-1">
                             Wallet User:
                         </p>
-                        <input type="text" name="status" placeholder="Number wallet" className={inputStyles} />
+                        <p className="h-[42px] w-[288px] pt-[11px] pl-2.5 border-b-2 border-gray-500 text-gray-500 italic">
+                            Number wallet
+                        </p>
                     </label>
                 </form>
 

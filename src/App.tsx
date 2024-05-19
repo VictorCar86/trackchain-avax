@@ -15,8 +15,9 @@ function App() {
       <Navbar />
       <main className='h-screen'>
         <Routes>
-          <Route path='/Login' element={<Login />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/form' element={<Dashboard><ProductForm/></Dashboard>}/>
+          <Route path='/info' element={<Dashboard><ProductInfo/></Dashboard>}/>
         </Routes>
       </main>
     </>
