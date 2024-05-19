@@ -1,10 +1,15 @@
+/* Components */
+import { WalletComponent } from "./components/WalletComponent";
+
+/* Images and Icons */
 import IconCore from "../assets/icons/IconCore";
-import IconMetamask from "../assets/icons/IconMetamask";
 
 function Login() {
+    
+
     return (
         <>
-            <section className="grid place-content-center h-screen" style={{background: "linear-gradient(180deg, #E84142 10%, #A80001 40%, #09090B 90%)"}}>
+            <section className="grid place-content-center h-screen w-full" style={{background: "linear-gradient(180deg, #E84142 10%, #A80001 40%, #09090B 90%)"}}>
                 <article className="w-[450px] mx-auto text-center font-bold">
                     <h1 className="mb-6">
                         TC - AVAX
@@ -25,9 +30,7 @@ function Login() {
                             <button className="bg-black" type="submit">
                                 <IconCore />
                             </button>
-                            <button className="bg-black" type="submit">
-                                <IconMetamask />
-                            </button>
+                            <WalletComponent />
                         </div>
                     </form>
                 </article>

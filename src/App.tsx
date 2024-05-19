@@ -1,25 +1,24 @@
 /* Hooks */
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-/* Components */
-import Navbar from './components/Navbar'
+/* Components page */
+/* import Navbar from './components/Navbar' */
 import Login from './pages/Login'
 import Dashboard from './layouts/Dashboard'
-import ProductForm from './components/ProductForm';
-import ProductInfo from './components/ProductInfo';
+
+/* Styles */
 import './App.css'
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <main className='h-screen'>
+    <main className='h-screen flex'>
+      <Router>
         <Routes>
-          <Route path='/Login' element={<Login />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard children={<p>Dashboard</p>} />} />
         </Routes>
-      </main>
-    </>
+      </Router>
+    </main>
   )
 }
 
