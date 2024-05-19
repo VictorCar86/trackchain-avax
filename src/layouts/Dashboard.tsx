@@ -6,7 +6,7 @@ function Dashboard({ children }: { children: ReactNode }) {
         <>
             <section>
                 <div className="relative">
-                    <Navbar className="fixed" />
+                    <Navbar />
                 </div>
                 <div className="pl-[276px] text-black">
                     { children }

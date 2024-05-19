@@ -21,58 +21,62 @@ function ProductForm() {
 
                 <hr className="shadow-[0px_0px_1px_0px_#cdcdcd]" />
 
-                <form className="grid grid-cols-2 grid-rows-4 gap-x-4 gap-y-3 w-max mt-6 mx-auto mb-6">
-                    <label>
-                        <p className="mb-1">
-                            Product Name:
-                        </p>
-                        <input type="text" name="name" placeholder="No product" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Product Price:
-                        </p>
-                        <input type="number" name="price" placeholder="$ - - -" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Create Date:
-                        </p>
-                        <input type="date" name="date" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Delivery Date:
-                        </p>
-                        <input type="date" name="delivery" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Product Code:
-                        </p>
-                        <input type="text" name="code" placeholder="TC-XXXX" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Phone Number:
-                        </p>
-                        <input type="tel" name="phone" placeholder="+57 XXX XXX XXXX" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Delivery Status:
-                        </p>
-                        <input type="text" name="status" placeholder="Current state" className={inputStyles} />
-                    </label>
-                    <label>
-                        <p className="mb-1">
-                            Wallet User:
-                        </p>
-                        <input type="text" name="status" placeholder="Number wallet" className={inputStyles} />
-                    </label>
-                </form>
+                <form className="mt-6 mb-6">
+                    <div className="grid grid-cols-2 grid-rows-4 gap-x-4 gap-y-3 w-max mx-auto">
+                        <label>
+                            <p className="mb-1">
+                                Product Name:
+                            </p>
+                            <input type="text" name="name" placeholder="No product" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Product Price:
+                            </p>
+                            <input type="number" name="price" placeholder="$ - - -" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Create Date:
+                            </p>
+                            <input type="date" name="date" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Delivery Date:
+                            </p>
+                            <input type="date" name="delivery" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Product Code:
+                            </p>
+                            <input type="text" name="code" placeholder="TC-XXXX" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Phone Number:
+                            </p>
+                            <input type="tel" name="phone" placeholder="+57 XXX XXX XXXX" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Delivery Status:
+                            </p>
+                            <input type="text" name="status" placeholder="Current state" className={inputStyles} />
+                        </label>
+                        <label>
+                            <p className="mb-1">
+                                Wallet User:
+                            </p>
+                            <input type="text" name="status" placeholder="Number wallet" className={inputStyles} />
+                        </label>
+                    </div>
 
-                <hr className="shadow-[0px_0px_1px_0px_#cdcdcd]" />
+                    <button className="block my-5 mx-auto hover:border-black hover:border border-black border" type="button">Submit</button>
+
+                    <hr className="shadow-[0px_0px_1px_0px_#cdcdcd]" />
+                </form>
 
                 {/* <div className="w-min mt-6 mx-auto rounded-2xl bg-gray-200">
                     <QRcode className="h-44 w-44"/>
