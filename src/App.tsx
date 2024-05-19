@@ -1,5 +1,4 @@
 /* Hooks */
-import { useContext } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 /* Components page */
@@ -7,18 +6,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import Dashboard from './layouts/Dashboard'
 
-/* Components rendering in Dashboard */
-import ProductForm from './components/ProductForm';
-import ProductInfo from './components/ProductInfo';
+/* Components rendering in root */
 import { Web3ModalProvider } from './utils/hooks/Web3ModalProvider';
-import { TrackContextProvider, TrackContext } from './context/context';
+import { TrackContextProvider } from './context/context';
 
 /* Styles */
 import './App.css'
 
 function App() {
-  const context = useContext(TrackContext);
-
   return (
     <Web3ModalProvider>
       <TrackContextProvider>
@@ -26,11 +21,7 @@ function App() {
           <Router>
             <Routes>
               <Route path='/' element={<Login />} />
-              {
-                context.navUserBtn1 ? (
-                  <Route path='/dashboard' element={<Dashboard children={<ProductForm />} />} />
-                ) : null
-              }
+              <Route path='/dashboard' element={<Dashboard />} />
             </Routes>
           </Router>
         </main>

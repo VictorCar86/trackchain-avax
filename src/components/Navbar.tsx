@@ -12,8 +12,8 @@ import IconUser from "../assets/icons/IconUser";
 function Navbar() {
     const context = useContext(TrackContext);
 
-    const classBtnAside = context.navUserBtn1 ? 'text-white' : 'w-full rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline';
-    const classBtnAside2 = context.navUserBtn2 ? 'text-white' : 'w-full rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline';
+    const classBtnAside = context.navUserBtn1 ? 'w-full rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline' : 'text-white';
+    const classBtnAside2 = context.navUserBtn2 ? 'w-full rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline' : 'text-white';
 
     return (
         <aside className={`fixed grid grid-flow-row h-screen w-[276px] p-5 rounded-r-xl bg-black`} style={{gridTemplateRows: '80px 1fr', background: "linear-gradient(180deg, #460408 0%, #CE3C3D 100%)"}}>

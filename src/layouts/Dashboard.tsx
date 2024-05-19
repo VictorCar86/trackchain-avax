@@ -1,7 +1,11 @@
 import Navbar from "../components/Navbar";
-import { ReactNode } from "react";
+import { useContext } from "react";
+import { TrackContext } from "../context/context";
+import ProductInfo from "../components/ProductInfo";
+import ProductForm from "../components/ProductForm";
 
-function Dashboard({ children }: { children: ReactNode }) {
+function Dashboard() {
+    const context = useContext(TrackContext);
     return (
         <>
             <section>
@@ -9,7 +13,7 @@ function Dashboard({ children }: { children: ReactNode }) {
                     <Navbar />
                 </div>
                 <div className="pl-[276px] text-black">
-                    { children }
+                    {context?.navUserBtn1 ?  <ProductForm /> : <ProductInfo />}
                 </div>
             </section>
         </>
