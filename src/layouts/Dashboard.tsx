@@ -5,19 +5,7 @@ import ProductInfo from "../components/ProductInfo";
 import ProductForm from "../components/ProductForm";
 
 function Dashboard() {
-    const productDemo = {
-        "date": "15/05/2024",
-        "delivery_date": "20/05/2024",
-        "product": "Mesa PC",
-        "code": "123ed",
-        "cel_number": "123456789"
-    }
-
     const context = useContext(TrackContext);
-
-    const json = JSON.stringify(productDemo);
-    console.log(json);
-
     return (
         <>
             <section>

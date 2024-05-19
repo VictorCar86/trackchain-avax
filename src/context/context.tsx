@@ -26,7 +26,7 @@ const contextObj: TrackContextType = {
 const TrackContext = createContext(contextObj);
 
 function TrackContextProvider({children}: {children: React.ReactNode}){
-  
+
   /* Button aside btn */
   const [navUserBtn1, setNavUserBtn1] = useState(true);
   const [navUserBtn2, setNavUserBtn2] = useState(false);
