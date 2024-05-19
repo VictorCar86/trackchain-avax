@@ -4,7 +4,7 @@ import IconMetamask from "../assets/icons/IconMetamask";
 function Login() {
     return (
         <>
-            <section className="grid place-content-center h-screen">
+            <section className="grid place-content-center h-screen" style={{background: "linear-gradient(180deg, #E84142 10%, #A80001 40%, #09090B 90%)"}}>
                 <article className="w-[450px] mx-auto text-center font-bold">
                     <h1 className="mb-6">
                         TC - AVAX
@@ -22,10 +22,10 @@ function Login() {
                         </div>
 
                         <div className="flex flex-col gap-2.5 w-min mt-4 mx-auto">
-                            <button type="submit">
+                            <button className="bg-black" type="submit">
                                 <IconCore />
                             </button>
-                            <button type="submit">
+                            <button className="bg-black" type="submit">
                                 <IconMetamask />
                             </button>
                         </div>

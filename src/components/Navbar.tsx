@@ -1,23 +1,35 @@
 import IconTCAvax from "../assets/icons/IconTCAvax";
 import IconClose from "../assets/icons/IconClose";
+import IconProvider from "../assets/icons/IconProvider";
+import IconUser from "../assets/icons/IconUser";
 
-function Navbar() {
+function Navbar({ className }: { className?: string }) {
     return (
-        <aside className="h-screen w-[18%] p-5 rounded-r-xl bg-black">
-            <h1 className="flex justify-center items-center gap-2.5 py-6 px-0 font-bold">
+        <aside className={`${className} grid grid-flow-row h-screen w-[276px] p-5 rounded-r-xl bg-black`} style={{gridTemplateRows: '80px 1fr', background: "linear-gradient(180deg, #460408 0%, #CE3C3D 100%)"}}>
+            <h1 className="flex justify-center items-center gap-2.5 pb-7 px-0 -ml-3 font-bold">
                 <IconTCAvax />
-                <span className="text-[28px]">
+                <span className="text-[32px]">
                     TC - AVAX
                 </span>
             </h1>
 
-            <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
+            <nav className="flex flex-col justify-between">
+                <ul className="flex flex-col gap-1.5">
+                    <li>
+                        <button className="flex gap-4 w-5/6 rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline focus-within:outline-white" type="button">
+                            <IconProvider />
+                            <span>Provider</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button className="flex gap-4 w-5/6 rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline focus-within:outline-white" type="button">
+                            <IconUser />
+                            <span>User</span>
+                        </button>
+                    </li>
                 </ul>
 
-                <button className="flex items-center gap-5" type="button">
+                <button className="flex gap-4 w-5/6 rounded-l-none rounded-r-xl focus:shadow-[2px_0px_10px_0px_#b2b2b2] focus-within:outline-1 focus-within:outline focus-within:outline-white" type="button">
                     <IconClose />
                     <span className="-mt-0.5">Sign Out</span>
                 </button>

@@ -1,9 +1,17 @@
 import Navbar from "../components/Navbar";
+import { ReactNode } from "react";
 
-function Dashboard() {
+function Dashboard({ children }: { children: ReactNode }) {
     return (
         <>
-            <Navbar />
+            <section>
+                <div className="relative">
+                    <Navbar className="fixed" />
+                </div>
+                <div className="pl-[276px] text-black">
+                    { children }
+                </div>
+            </section>
         </>
     )
 }
