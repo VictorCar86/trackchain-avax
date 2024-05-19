@@ -3,9 +3,9 @@ import IconClose from "../assets/icons/IconClose";
 import IconProvider from "../assets/icons/IconProvider";
 import IconUser from "../assets/icons/IconUser";
 
-function Navbar({ className }: { className?: string }) {
+function Navbar() {
     return (
-        <aside className={`${className} grid grid-flow-row h-screen w-[276px] p-5 rounded-r-xl bg-black`} style={{gridTemplateRows: '80px 1fr', background: "linear-gradient(180deg, #460408 0%, #CE3C3D 100%)"}}>
+        <aside className={`fixed grid grid-flow-row h-screen w-[276px] p-5 rounded-r-xl bg-black`} style={{gridTemplateRows: '80px 1fr', background: "linear-gradient(180deg, #460408 0%, #CE3C3D 100%)"}}>
             <h1 className="flex justify-center items-center gap-2.5 pb-7 px-0 -ml-3 font-bold">
                 <IconTCAvax />
                 <span className="text-[32px]">
