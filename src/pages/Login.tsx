@@ -6,10 +6,7 @@ import { WalletComponent } from "./components/WalletComponent";
 import { useConnectModal } from '@rainbow-me/rainbowkit';
 
 function Login() {
-    let { openConnectModal } = useConnectModal();
-
-    console.log(openConnectModal);
-    
+    const { openConnectModal } = useConnectModal();
 
     return (
         <>
@@ -32,15 +29,15 @@ function Login() {
 
                         <div className="flex flex-col gap-2.5 w-min mt-4 mx-auto">
                             <div>
-                                <WalletComponent /> 
+                                <WalletComponent />
                             </div>
                             {
                                 !openConnectModal && (
                                     <div>
-                                        <button 
+                                        <button
                                         className="btn-wallet border-white border-2 w-full"
                                         onClick={() => {openConnectModal}}>
-                                            <Link 
+                                            <Link
                                             className="text-white"
                                             to="/dashboard">
                                                 Continue

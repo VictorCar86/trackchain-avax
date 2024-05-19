@@ -10,6 +10,7 @@ import Dashboard from './layouts/Dashboard'
 /* Components rendering in Dashboard */
 import ProductForm from './components/ProductForm';
 import ProductInfo from './components/ProductInfo';
+import { Web3ModalProvider } from './utils/hooks/Web3ModalProvider';
 import { TrackContextProvider, TrackContext } from './context/context';
 
 /* Styles */
@@ -19,20 +20,22 @@ function App() {
   const context = useContext(TrackContext);
 
   return (
-    <TrackContextProvider>
-      <main className='h-screen flex'>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Login />} />
-            {
-              context.navUserBtn1 ? (
-                <Route path='/dashboard' element={<Dashboard children={<ProductForm />} />} />
-              ) : null
-            }
-          </Routes>
-        </Router>
-      </main>
-    </TrackContextProvider>
+    <Web3ModalProvider>
+      <TrackContextProvider>
+        <main className='h-screen flex'>
+          <Router>
+            <Routes>
+              <Route path='/' element={<Login />} />
+              {
+                context.navUserBtn1 ? (
+                  <Route path='/dashboard' element={<Dashboard children={<ProductForm />} />} />
+                ) : null
+              }
+            </Routes>
+          </Router>
+        </main>
+      </TrackContextProvider>
+    </Web3ModalProvider>
   )
 }
 
