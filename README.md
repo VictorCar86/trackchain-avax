@@ -7,6 +7,15 @@ Controla tus envios, alcanza tus metas: ¡Gestiona tus pedidos con eficiencia!
 ## Repositorio de los contratos
 [https://github.com/TrabajoOscar/TrabajoOscar.git](https://github.com/TrabajoOscar/TrackChainAVAX_contracts.git)
 
+## Presentacion
+https://docs.google.com/presentation/d/1T_R_6xOy5JxXaUu5GEYabw0XB6UZNUTBMvrl0NxjFjE/edit?usp=sharing
+
+## Figma
+https://www.figma.com/design/n7LF4CKi0vKTVgPEVLJgWJ/Hackathon-Avalanche-(SaaS)?node-id=0%3A1&t=IANYsu22Uxl145Mq-1
+
+## Vercel
+
+
 
 ## React + TypeScript + Vite
 
