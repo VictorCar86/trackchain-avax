@@ -1,5 +1,4 @@
 /* Hooks */
-import { useContext } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 /* Components page */
@@ -8,16 +7,12 @@ import Login from './pages/Login'
 import Dashboard from './layouts/Dashboard'
 
 /* Components rendering in Dashboard */
-import ProductForm from './components/ProductForm';
-import ProductInfo from './components/ProductInfo';
-import { TrackContextProvider, TrackContext } from './context/context';
+import { TrackContextProvider } from './context/context';
 
 /* Styles */
 import './App.css'
 
 function App() {
-  const context = useContext(TrackContext);
-
   return (
     <TrackContextProvider>
       <main className='h-screen flex'>
