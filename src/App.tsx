@@ -24,11 +24,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Login />} />
-            {
-              context.navUserBtn1 ? (
-                <Route path='/dashboard' element={<Dashboard children={<ProductForm />} />} />
-              ) : null
-            }
+            <Route path='/dashboard' element={<Dashboard />} />
           </Routes>
         </Router>
       </main>
