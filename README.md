@@ -5,7 +5,8 @@ Controla tus envios, alcanza tus metas: ¡Gestiona tus pedidos con eficiencia!
 ![image](https://github.com/VictorCar86/trackchain-avax/assets/82790610/14a8dd03-81bf-4373-bd05-61bedba4718f)
 
 ## Repositorio de los contratos
-https://github.com/TrabajoOscar/TrabajoOscar.git
+[https://github.com/TrabajoOscar/TrabajoOscar.git](https://github.com/TrabajoOscar/TrackChainAVAX_contracts.git)
+
 
 ## React + TypeScript + Vite
 
