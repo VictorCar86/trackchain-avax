@@ -1,13 +1,12 @@
-# React + TypeScript + Vite
-"Controla tus envios, alcanza tus metas: ¡Gestiona tus pedidos con eficiencia!"
+# TrackChainAVAX 🚆🚚🚢
+Controla tus envios, alcanza tus metas: ¡Gestiona tus pedidos con eficiencia!
 
 ![image](https://github.com/VictorCar86/trackchain-avax/assets/82790610/14a8dd03-81bf-4373-bd05-61bedba4718f)
-
-
 
 ## Repositorio de los cotratos
 https://github.com/TrabajoOscar/TrabajoOscar.git
 
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
