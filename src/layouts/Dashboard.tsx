@@ -7,7 +7,7 @@ function Dashboard({ children }: { children: ReactNode }) {
         "delivery_date": "20/05/2024",
         "product": "Mesa PC",
         "code": "123ed",
-        "cel_number": "123456789"
+        "cel_number": "123456789"
     }
 
     const json = JSON.stringify(productDemo);
