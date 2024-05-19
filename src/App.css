@@ -3,3 +3,19 @@
   padding: 8px 12px 12px 12px !important;
   text-align: center !important;
 }
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+}
+
+.btn-wallet:hover{
+  border: 1px solid #a80001;
+}
+
+.btn-wallet a:hover{
+  color: #a80001;
+}
