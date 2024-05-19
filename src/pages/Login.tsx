@@ -1,10 +1,14 @@
 /* Components */
+import { Link } from "react-router-dom";
 import { WalletComponent } from "./components/WalletComponent";
 
 /* Images and Icons */
-import IconCore from "../assets/icons/IconCore";
+import { useConnectModal } from '@rainbow-me/rainbowkit';
 
 function Login() {
+    let { openConnectModal } = useConnectModal();
+
+    console.log(openConnectModal);
     
 
     return (
@@ -27,10 +31,24 @@ function Login() {
                         </div>
 
                         <div className="flex flex-col gap-2.5 w-min mt-4 mx-auto">
-                            <button className="bg-black" type="submit">
-                                <IconCore />
-                            </button>
-                            <WalletComponent />
+                            <div>
+                                <WalletComponent /> 
+                            </div>
+                            {
+                                !openConnectModal && (
+                                    <div>
+                                        <button 
+                                        className="btn-wallet border-white border-2 w-full"
+                                        onClick={() => {openConnectModal}}>
+                                            <Link 
+                                            className="text-white"
+                                            to="/dashboard">
+                                                Continue
+                                            </Link>
+                                        </button>
+                                    </div>
+                                )
+                            }
                         </div>
                     </form>
                 </article>
